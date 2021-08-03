@@ -56,6 +56,23 @@ class CalculationRunnerTest {
     }
 
     @Test
+    fun testRun_AL() {
+        // Arrange
+        val numbersOfItems = 3
+        val pricePerItem = 5.0
+        val stateCode = "AL"
+
+        // Action
+        val actual = CalculationRunner().run(numbersOfItems, pricePerItem, stateCode)
+
+        // Expect
+        val expected = 15.61
+
+        // Assert
+        assertThat(actual, `is`(expected))
+    }
+
+    @Test
     fun testRun_price_below_1dollar() {
         // Arrange
         val numbersOfItems = 3
