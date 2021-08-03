@@ -6,14 +6,14 @@ class CalculationRunnerTest {
     @Test
     fun testRun() {
         // Arrange
-        val numbersOfItems = 1
-        val pricePerItem = 2
+        val numbersOfItems = 3
+        val pricePerItem = 5
 
         // Action
         val actual = CalculationRunner().run(numbersOfItems, pricePerItem)
 
         // Expect
-        val expected = 2
+        val expected = 16.03
 
         // Assert
         assertThat(actual, `is`(expected))
