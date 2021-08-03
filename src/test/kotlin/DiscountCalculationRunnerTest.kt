@@ -77,4 +77,19 @@ class DiscountCalculationRunnerTest {
         // Assert
         Assert.assertThat(actual, CoreMatchers.`is`(expected))
     }
+
+    @Test
+    fun testRun_over_50000() {
+        // Arrange
+        val totalPrice = 50000.0
+
+        // Action
+        val actual = DiscountCalculationRunner().run(totalPrice)
+
+        // Expect
+        val expected = 42500.0
+
+        // Assert
+        Assert.assertThat(actual, CoreMatchers.`is`(expected))
+    }
 }
