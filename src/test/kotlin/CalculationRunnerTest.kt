@@ -5,7 +5,7 @@ import org.junit.Assert.fail
 
 class CalculationRunnerTest {
     @Test
-    fun testRun() {
+    fun testRun_UT() {
         // Arrange
         val numbersOfItems = 3
         val pricePerItem = 5.0
@@ -22,7 +22,7 @@ class CalculationRunnerTest {
     }
 
     @Test
-    fun testRun_price_below_1dollar() {
+    fun testRun_UT_price_below_1dollar() {
         // Arrange
         val numbersOfItems = 3
         val pricePerItem = 0.50
@@ -33,6 +33,23 @@ class CalculationRunnerTest {
 
         // Expect
         val expected = 1.61
+
+        // Assert
+        assertThat(actual, `is`(expected))
+    }
+
+    @Test
+    fun testRun_NV() {
+        // Arrange
+        val numbersOfItems = 3
+        val pricePerItem = 5.0
+        val stateCode = "NV"
+
+        // Action
+        val actual = CalculationRunner().run(numbersOfItems, pricePerItem, stateCode)
+
+        // Expect
+        val expected = 16.21
 
         // Assert
         assertThat(actual, `is`(expected))
