@@ -1,6 +1,7 @@
 import org.hamcrest.CoreMatchers.`is`
 import org.junit.Test
 import org.junit.Assert.assertThat
+import org.junit.Assert.fail
 
 class CalculationRunnerTest {
     @Test
@@ -8,9 +9,10 @@ class CalculationRunnerTest {
         // Arrange
         val numbersOfItems = 3
         val pricePerItem = 5.0
+        val stateCode = "UT"
 
         // Action
-        val actual = CalculationRunner().run(numbersOfItems, pricePerItem)
+        val actual = CalculationRunner().run(numbersOfItems, pricePerItem, stateCode)
 
         // Expect
         val expected = 16.03
@@ -24,14 +26,32 @@ class CalculationRunnerTest {
         // Arrange
         val numbersOfItems = 3
         val pricePerItem = 0.50
+        val stateCode = "UT"
 
         // Action
-        val actual = CalculationRunner().run(numbersOfItems, pricePerItem)
+        val actual = CalculationRunner().run(numbersOfItems, pricePerItem, stateCode)
 
         // Expect
         val expected = 1.61
 
         // Assert
         assertThat(actual, `is`(expected))
+    }
+
+    @Test
+    fun testRun_invalid_stateCode() {
+        // Arrange
+        val numbersOfItems = 3
+        val pricePerItem = 0.50
+        val stateCode = "XX"
+
+        try {
+            CalculationRunner().run(numbersOfItems, pricePerItem, stateCode)
+        } catch (e: IllegalArgumentException) {
+            // pass
+            return
+        }
+
+        fail()
     }
 }

@@ -6,7 +6,9 @@ class CalculationRunner {
         private const val TAX_RATE_UT = 1.0685f
     }
 
-    fun run(numbersOfItems: Int, pricePerItem: Double): Double {
+    fun run(numbersOfItems: Int, pricePerItem: Double, stateCode: String): Double {
+        require(stateCode == "UT") { "UT only available for state." }
+
         val rawPrice = (numbersOfItems * pricePerItem) * TAX_RATE_UT
 
         // cent should be in range of `0 ~ 99`
