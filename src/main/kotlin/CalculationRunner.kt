@@ -20,5 +20,6 @@ class CalculationRunner {
 
 enum class TaxRate(val taxRate: Double) {
     UT(1.0685),
-    NV(1.0800)
+    NV(1.0800),
+    TX(1.0625)
 }
