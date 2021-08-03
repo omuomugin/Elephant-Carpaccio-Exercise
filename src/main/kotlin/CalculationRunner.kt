@@ -6,8 +6,8 @@ class CalculationRunner {
         private const val TAX_RATE_UT = 1.0685f
     }
 
-    fun run(numbersOfItems: Int, pricePerItem: Int): Double {
-        val rawPrice = (numbersOfItems * pricePerItem).toDouble() * TAX_RATE_UT
+    fun run(numbersOfItems: Int, pricePerItem: Double): Double {
+        val rawPrice = (numbersOfItems * pricePerItem) * TAX_RATE_UT
 
         // cent should be in range of `0 ~ 99`
         // which means result only can be in format with 2 places of decimals
