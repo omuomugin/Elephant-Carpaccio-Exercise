@@ -4,7 +4,7 @@
 1. Print "Hello World!"
 2. Get argument and print it (just like echo)
 3. Get two int arguments and print it
-4. Multiply those two ints and calculate them
+4. Multiply those two ints and calculate them (adding test for the first time)
 5. Calculate only for UT state. (output should be float in this story)
 6. Get state letter for argument but only UT is available.
 7. Get state letter for argument but only UT, NV is available. (if state is not supported show "error")
