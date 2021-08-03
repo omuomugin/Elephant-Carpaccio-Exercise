@@ -4,10 +4,12 @@ class DiscountCalculationRunner {
 
     companion object {
         private const val DISCOUNT_RATE_OVER_1000 = 0.97
+        private const val DISCOUNT_RATE_OVER_5000 = 0.95
     }
 
     fun run(totalPrice: Double): Double {
         val discountRate = when {
+            totalPrice >= 5000 -> DISCOUNT_RATE_OVER_5000
             totalPrice >= 1000 -> DISCOUNT_RATE_OVER_1000
             else -> {
                 // no discount
