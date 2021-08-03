@@ -9,5 +9,7 @@ fun main(args: Array<String>) {
         stateCode = stateCode
     )
 
-    println(result)
+    val discountedResult = DiscountCalculationRunner().run(result)
+
+    println(discountedResult)
 }
