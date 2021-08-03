@@ -22,5 +22,6 @@ enum class TaxRate(val taxRate: Double) {
     UT(1.0685),
     NV(1.08),
     TX(1.0625),
-    AL(1.04)
+    AL(1.04),
+    CA(1.0825)
 }
