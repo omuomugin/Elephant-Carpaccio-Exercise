@@ -1,5 +1,14 @@
 ## What is this
-Personally trying [Elephant Carpaccio exercise](https://docs.google.com/document/d/1TCuuu-8Mm14oxsOnlk8DqfZAA1cvtYu9WGv67Yj_sSk/pub).
+Personally trying [Elephant Carpaccio Exercise](https://docs.google.com/document/d/1TCuuu-8Mm14oxsOnlk8DqfZAA1cvtYu9WGv67Yj_sSk/pub).
+
+> The Elephant Carpaccio exercise is a great way for software people to practice & learn how to break stories into really thin vertical slices. It also leads to interesting discussions about quality and tech practices.
+
+In this excercise you build program which calculates total price of given item counts, price per item and state code (for calculation taxes).  
+The point here is to slice as many as you can in form of user stories.  
+Which means each slices should be
+- Implementable (including user interface) in 2-6 minutes.
+- Noticeable different from last slice
+- More valuable to customer than last slice (exception: for first couple of slices, focusing on reduced risk is OK).
 
 ## Slices of User Stories I came up with
 1. Print "Hello World!" - Reducing Technical Risk
